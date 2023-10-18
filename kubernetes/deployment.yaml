@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: TheloneWnderer/devsecopslabgit:v16
+          image: TheloneWnderer/devsecopslabgit:v17
           resources:
             requests:
               memory: "50Mi"
