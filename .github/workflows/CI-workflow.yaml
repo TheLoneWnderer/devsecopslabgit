@@ -59,7 +59,7 @@ jobs:
 
       - name: Edit manifests in ENV repo
         run: |
-          yq eval -i '.spec.template.spec.containers[0].image = "Edit manifests in ENV repo:v${{ github.run_number }}"' ./kubernetes/deployment.yaml
+          yq eval -i '.spec.template.spec.containers[0].image = "TheloneWnderer/devsecopslabgit:v${{ github.run_number }}"' ./kubernetes/deployment.yaml
 
       - name: Commit and Push to ENV repo
         run: |
