@@ -49,7 +49,7 @@ jobs:
       - name: Checkout the ENV Repo
         uses: actions/checkout@v3
         with:
-          repository: 'thelonewnderer/devsecopslabgit'
+          repository: 'solothin/devsecopslab'
           ref: 'main'
           token:  ${{ secrets.GITLEAKS}}
 
