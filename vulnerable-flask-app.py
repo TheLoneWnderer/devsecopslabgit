@@ -244,3 +244,4 @@ if __name__ == '__main__':
 'deployment test 2'
 'deployment test 3'
 'deployment test 4'
+'deployment test 5'
