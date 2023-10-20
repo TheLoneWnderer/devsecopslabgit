@@ -27,8 +27,6 @@ jobs:
           python3 -m pip install semgrep
           if [ -f ./requirements.txt ]; then pip install -r ./requirements.txt; fi
 
-      - name: Install Gitleaks
-        run: gitleaks --path=. --verbose
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
@@ -47,6 +45,13 @@ jobs:
         run: |
           docker tag test_${{ github.run_number }}:v1 solothin/devsecopslab:v${{ github.run_number }}
           docker push solothin/devsecopslab:v${{ github.run_number }}
+      
+      - name: Install Gitleaks
+        run: |
+          curl -sSfl https://github.com/zricethezav/gitleaks/releases/latest/download/gitleaks-linux-amd64 --output gitleaks
+          chmod +x gitleaks
+          sudo mv gitleaks /usr/local/bin/
+          gitleaks --verbose
 
       - name: Checkout the ENV Repo
         uses: actions/checkout@v3
