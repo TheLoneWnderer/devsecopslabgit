@@ -27,7 +27,9 @@ jobs:
           python3 -m pip install semgrep
           if [ -f ./requirements.txt ]; then pip install -r ./requirements.txt; fi
 
-      
+      - name: Install Gitleaks
+        run: gitleaks --path=. --verbose
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
