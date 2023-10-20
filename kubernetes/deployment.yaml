@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: solothin/devsecops:v22
+          image: thelonewnderer/devsecopslabgit:v24
           resources:
             requests:
               memory: "50Mi"
