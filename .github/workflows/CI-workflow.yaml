@@ -57,7 +57,7 @@ jobs:
         with:
           repository: 'thelonewnderer/devsecopslabgit'
           ref: 'main'
-          token:  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
+          token:  ${{ secrets.GITLEAKS}}
 
       - name: Set up YQ command
         run: |
