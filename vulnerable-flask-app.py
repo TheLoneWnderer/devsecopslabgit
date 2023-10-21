@@ -256,3 +256,4 @@ if __name__ == '__main__':
 'security test 3'
 'security test 4'
 'security test 5'
+'security test 6'
