@@ -19,7 +19,12 @@ jobs:
           ref: '${{ github.ref_name }}'
           token: ${{ secrets.GITLEAKS }}
       
-          
+      - name: Install Gitleaks
+        run: |
+          curl -sSfl https://github.com/zricethezav/gitleaks/releases/latest/download/gitleaks-linux-amd64 --output gitleaks
+          chmod +x gitleaks
+          sudo mv gitleaks /usr/local/bin/
+          gitleaks --verbose
 
       - name: Install dependencies 
         run: |
@@ -46,12 +51,6 @@ jobs:
           docker tag test_${{ github.run_number }}:v1 solothin/devsecopslab:v${{ github.run_number }}
           docker push solothin/devsecopslab:v${{ github.run_number }}
       
-      - name: Install Gitleaks
-        run: |
-          curl -sSfl https://github.com/zricethezav/gitleaks/releases/latest/download/gitleaks-linux-amd64 --output gitleaks
-          chmod +x gitleaks
-          sudo mv gitleaks /usr/local/bin/
-          gitleaks --verbose
 
       - name: Checkout the ENV Repo
         uses: actions/checkout@v3
