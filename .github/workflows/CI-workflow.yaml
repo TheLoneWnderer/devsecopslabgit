@@ -35,6 +35,7 @@ jobs:
       - name: Run Semgrep
         run: |
           semgrep 'vulnerable-flask-app.py'
+        working-directory: ${{ github.workspace }}
 
 
       - name: Set up Docker Buildx
