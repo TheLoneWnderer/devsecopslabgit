@@ -260,3 +260,4 @@ if __name__ == '__main__':
 'security test 7'
 
 'vulnerability test 1'
+'vulnerability test 2'
