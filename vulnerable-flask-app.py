@@ -262,3 +262,5 @@ if __name__ == '__main__':
 'vulnerability test 1'
 'vulnerability test 2'
 'vulnerability test 3'
+
+'vulnerability test 4'
